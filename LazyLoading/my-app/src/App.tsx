@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [secondState, setSecondState] = useState(false);
+  const [secondState, setSecondState] = useState(true);
   const pass = 'bubun';
 
   const FunctionOne = lazy(() => import('./FunctionOne'));
