@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 
 const throttle = (func, limit) => {
-  let inThrottle;
+  let inThrottle=true;
   return function () {
     const args = arguments;
     const context = this;
@@ -21,7 +21,7 @@ function App() {
     setCount((prev) => prev + 1);
   };
 
-  const throttledIncrement = throttle(incrementCount, 1);
+  const throttledIncrement = throttle(incrementCount, 10000);
 
   return (
     <>
